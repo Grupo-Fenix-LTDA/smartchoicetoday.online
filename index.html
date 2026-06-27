@@ -1,0 +1,899 @@
+<!-- 1ebf83fd90cc4fa7 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO S.A. — Apoio administrativo e operações de back-office - Smartchoicetoday</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14233F;
+    --ink-2:#25365A;
+    --slate:#54607A;
+    --slate-2:#828DA4;
+    --gold:#C2974A;
+    --gold-deep:#A87E36;
+    --bg:#F4F6F9;
+    --surface:#FFFFFF;
+    --line:#E3E8F0;
+    --line-2:#EEF1F6;
+    --radius:14px;
+    --radius-sm:10px;
+    --maxw:1140px;
+    --shadow-sm:0 1px 2px rgba(20,35,63,.05);
+    --shadow:0 18px 50px -24px rgba(20,35,63,.30);
+    --shadow-card:0 10px 30px -18px rgba(20,35,63,.25);
+    --ff-display:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --ff-body:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--ff-body);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  :focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+  .tkk6_wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:84px}
+  .tkk6_pad{padding:88px 0}
+
+  .tkk6_eyebrow{
+    font-family:var(--ff-display);
+    font-weight:600;
+    font-size:.76rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+  }
+  .tkk6_eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold);display:inline-block}
+
+  h1,h2,h3{font-family:var(--ff-display);line-height:1.12;letter-spacing:-.02em;color:var(--ink)}
+  h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700}
+  h3{font-size:1.16rem;font-weight:600;letter-spacing:-.01em}
+  .tkk6_lead{color:var(--slate);font-size:1.06rem;max-width:54ch}
+
+  .tkk6_section-head{max-width:680px;margin-bottom:46px}
+  .tkk6_section-head h2{margin:16px 0 14px}
+
+  /* ---------- Buttons ---------- */
+  .tkk6_btn{
+    font-family:var(--ff-display);
+    font-weight:600;
+    font-size:.97rem;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:14px 26px;
+    border-radius:var(--radius-sm);
+    cursor:pointer;
+    border:1.5px solid transparent;
+    transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease;
+    white-space:nowrap;
+  }
+  .tkk6_btn svg{width:17px;height:17px}
+  .tkk6_btn-primary{background:var(--ink);color:#fff;box-shadow:var(--shadow-sm)}
+  .tkk6_btn-primary:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:var(--shadow)}
+  .tkk6_btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .tkk6_btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .tkk6_btn-gold{background:var(--gold);color:#fff}
+  .tkk6_btn-gold:hover{background:var(--gold-deep);transform:translateY(-2px);box-shadow:var(--shadow)}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(244,246,249,.82);
+    backdrop-filter:saturate(180%) blur(12px);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease,background .25s ease,box-shadow .25s ease;
+  }
+  header.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 20px -16px rgba(20,35,63,.4)}
+  .tkk6_nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .tkk6_brand{display:flex;align-items:center;gap:12px;font-family:var(--ff-display);font-weight:800;font-size:1.18rem;letter-spacing:-.01em;color:var(--ink)}
+  .tkk6_brand .tkk6_sub{font-weight:500;font-size:.62rem;letter-spacing:.18em;color:var(--slate-2);display:block;margin-top:1px}
+  .tkk6_logomark{width:38px;height:38px;flex:none}
+  .tkk6_nav-links{display:flex;align-items:center;gap:30px}
+  .tkk6_nav-links a{font-size:.95rem;color:var(--slate);font-weight:500;transition:color .15s ease;position:relative}
+  .tkk6_nav-links a:hover{color:var(--ink)}
+  .tkk6_nav-cta{display:flex;align-items:center;gap:14px}
+  .tkk6_menu-btn{display:none;background:none;border:1.5px solid var(--line);border-radius:9px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+  .tkk6_menu-btn svg{width:22px;height:22px;color:var(--ink)}
+
+  /* ---------- Hero ---------- */
+  .tkk6_hero{position:relative;overflow:hidden;padding:78px 0 70px}
+  .tkk6_hero-grid-bg{position:absolute;inset:0;z-index:0;opacity:.55;
+    background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 70% 30%,#000 30%,transparent 75%);
+    mask-image:radial-gradient(ellipse 80% 60% at 70% 30%,#000 30%,transparent 75%);
+  }
+  .tkk6_hero .tkk6_wrap{position:relative;z-index:1}
+  .tkk6_hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .tkk6_hero h1{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:800;margin:20px 0 22px}
+  .tkk6_hero h1 .tkk6_accent{color:var(--gold-deep)}
+  .tkk6_hero p.tkk6_lead{font-size:1.12rem;margin-bottom:34px}
+  .tkk6_hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .tkk6_hero-meta{margin-top:38px;display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
+  .tkk6_hero-meta .tkk6_item{display:flex;flex-direction:column;gap:3px}
+  .tkk6_hero-meta .k{font-family:var(--ff-display);font-weight:700;font-size:1.02rem;color:var(--ink)}
+  .tkk6_hero-meta .l{font-size:.82rem;color:var(--slate-2)}
+
+  .tkk6_hero-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:18px;
+    padding:30px;box-shadow:var(--shadow-card);position:relative;
+  }
+  .tkk6_hero-card .tkk6_tag{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);font-family:var(--ff-display);font-weight:600}
+  .tkk6_hero-card h3{margin:14px 0 18px;font-size:1.18rem}
+  .tkk6_hero-card .tkk6_row{display:flex;align-items:flex-start;gap:13px;padding:13px 0;border-top:1px solid var(--line-2)}
+  .tkk6_hero-card .tkk6_row:first-of-type{border-top:none;padding-top:6px}
+  .tkk6_hero-card .tkk6_ico{width:34px;height:34px;border-radius:9px;background:#F1F4F9;display:flex;align-items:center;justify-content:center;flex:none}
+  .tkk6_hero-card .tkk6_ico svg{width:18px;height:18px;color:var(--ink-2)}
+  .tkk6_hero-card .tkk6_row p{font-size:.94rem;color:var(--slate);line-height:1.5}
+  .tkk6_hero-card .tkk6_row strong{display:block;color:var(--ink);font-family:var(--ff-display);font-weight:600;font-size:.98rem;margin-bottom:1px}
+
+  /* ---------- Trust strip ---------- */
+  .tkk6_strip{background:var(--ink);color:#fff}
+  .tkk6_strip .tkk6_wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 24px;flex-wrap:wrap}
+  .tkk6_strip p{font-size:.96rem;color:#C7D0E0;max-width:60ch}
+  .tkk6_strip .tkk6_vals{display:flex;gap:28px;flex-wrap:wrap}
+  .tkk6_strip .tkk6_vals span{display:flex;align-items:center;gap:9px;font-size:.92rem;color:#E8EDF5;font-family:var(--ff-display);font-weight:500}
+  .tkk6_strip .tkk6_vals svg{width:17px;height:17px;color:var(--gold)}
+
+  /* ---------- About ---------- */
+  .tkk6_about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+  .tkk6_about-visual{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#1B2A48 0%,#25365A 100%);min-height:380px;display:flex;align-items:center;justify-content:center;padding:36px}
+  .tkk6_about-visual .tkk6_pattern{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:34px 34px}
+  .tkk6_about-visual .tkk6_modules{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%;max-width:280px}
+  .tkk6_about-visual .tkk6_mod{aspect-ratio:1;border-radius:11px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center}
+  .tkk6_about-visual .tkk6_mod.tkk6_fill{background:var(--gold);border-color:var(--gold)}
+  .tkk6_about-visual .tkk6_mod svg{width:24px;height:24px;color:rgba(255,255,255,.85)}
+  .tkk6_about-visual .tkk6_mod.tkk6_fill svg{color:#fff}
+  .tkk6_about-text h2{margin:16px 0 20px}
+  .tkk6_about-text p{color:var(--slate);margin-bottom:18px}
+  .tkk6_about-text p:last-child{margin-bottom:0}
+  .tkk6_about-text .tkk6_pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  .tkk6_about-text .tkk6_pillar{display:flex;gap:12px;align-items:flex-start}
+  .tkk6_about-text .tkk6_pillar .tkk6_dot{width:30px;height:30px;border-radius:8px;background:#F1F4F9;display:flex;align-items:center;justify-content:center;flex:none}
+  .tkk6_about-text .tkk6_pillar svg{width:16px;height:16px;color:var(--gold-deep)}
+  .tkk6_about-text .tkk6_pillar b{font-family:var(--ff-display);font-weight:600;font-size:.97rem}
+  .tkk6_about-text .tkk6_pillar span{font-size:.88rem;color:var(--slate);display:block}
+
+  /* ---------- Services ---------- */
+  #servicos{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tkk6_cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tkk6_card{
+    background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+  }
+  .tkk6_card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card);border-color:#D7DEEA}
+  .tkk6_card .ci{width:48px;height:48px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+  .tkk6_card .ci svg{width:23px;height:23px;color:#fff}
+  .tkk6_card h3{margin-bottom:10px}
+  .tkk6_card p{font-size:.96rem;color:var(--slate);line-height:1.6}
+
+  /* ---------- Process ---------- */
+  .tkk6_steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+  .tkk6_step{position:relative;padding-top:18px;border-top:2px solid var(--line)}
+  .tkk6_step::before{
+    counter-increment:step;content:"0" counter(step);
+    font-family:var(--ff-display);font-weight:800;font-size:1.05rem;color:var(--gold-deep);
+    position:absolute;top:-1px;left:0;background:var(--bg);padding-right:12px;transform:translateY(-55%);
+  }
+  .tkk6_step.tkk6_active{border-top-color:var(--gold)}
+  .tkk6_step h3{margin:6px 0 10px;font-size:1.06rem}
+  .tkk6_step p{font-size:.93rem;color:var(--slate)}
+
+  /* ---------- Testimonials ---------- */
+  #depoimentos{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tkk6_quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tkk6_quote{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
+  .tkk6_quote .tkk6_mark{font-family:var(--ff-display);font-weight:800;font-size:2.4rem;line-height:.6;color:var(--gold);height:24px;margin-bottom:16px}
+  .tkk6_quote p{font-size:.99rem;color:var(--ink-2);line-height:1.6;flex:1}
+  .tkk6_quote .tkk6_who{display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+  .tkk6_quote .av{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-weight:700;font-size:.95rem;flex:none}
+  .tkk6_quote .tkk6_who b{display:block;font-family:var(--ff-display);font-weight:600;font-size:.93rem}
+  .tkk6_quote .tkk6_who span{font-size:.82rem;color:var(--slate-2)}
+
+  /* ---------- Contact ---------- */
+  .tkk6_contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+  .tkk6_contact-info h2{margin:16px 0 18px}
+  .tkk6_contact-info>p{color:var(--slate);margin-bottom:30px;max-width:46ch}
+  .tkk6_channel{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+  .tkk6_channel:first-of-type{border-top:none}
+  .tkk6_channel .tkk6_ch-ico{width:46px;height:46px;border-radius:11px;background:#F1F4F9;display:flex;align-items:center;justify-content:center;flex:none}
+  .tkk6_channel .tkk6_ch-ico svg{width:20px;height:20px;color:var(--ink-2)}
+  .tkk6_channel .l{font-size:.8rem;color:var(--slate-2);text-transform:uppercase;letter-spacing:.08em}
+  .tkk6_channel .v{font-family:var(--ff-display);font-weight:600;font-size:1rem;color:var(--ink);word-break:break-word}
+  .tkk6_channel a.v:hover{color:var(--gold-deep)}
+
+  .tkk6_form-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:34px;box-shadow:var(--shadow-card)}
+  .tkk6_form-card h3{margin-bottom:6px}
+  .tkk6_form-card .tkk6_fc-sub{font-size:.92rem;color:var(--slate);margin-bottom:24px}
+  .tkk6_field{margin-bottom:18px}
+  .tkk6_field label{display:block;font-size:.85rem;font-weight:600;font-family:var(--ff-display);color:var(--ink-2);margin-bottom:7px}
+  .tkk6_field input,.tkk6_field textarea{
+    width:100%;font-family:var(--ff-body);font-size:1rem;color:var(--ink);
+    padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;background:#FBFCFD;
+    transition:border-color .15s ease,box-shadow .15s ease;
+  }
+  .tkk6_field input:focus,.tkk6_field textarea:focus{outline:none;border-color:var(--ink-2);box-shadow:0 0 0 3px rgba(37,54,90,.08);background:#fff}
+  .tkk6_field textarea{resize:vertical;min-height:118px}
+  .tkk6_form-note{font-size:.8rem;color:var(--slate-2);margin-top:6px}
+  .tkk6_form-success{display:none;align-items:flex-start;gap:13px;background:#F0F7F2;border:1px solid #CCE6D5;border-radius:12px;padding:18px 18px;color:#1F5135}
+  .tkk6_form-success.show{display:flex}
+  .tkk6_form-success svg{width:22px;height:22px;color:#2E8B57;flex:none;margin-top:1px}
+  .tkk6_form-success b{font-family:var(--ff-display);display:block;margin-bottom:2px}
+  .tkk6_form-success span{font-size:.9rem}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#C7D0E0;padding:64px 0 30px}
+  .tkk6_foot-top{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:44px;padding-bottom:42px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .tkk6_foot-brand .tkk6_brand{color:#fff;margin-bottom:16px}
+  .tkk6_foot-brand .tkk6_brand .tkk6_sub{color:#7E8AA3}
+  .tkk6_foot-brand p{font-size:.93rem;color:#9AA5BC;max-width:38ch;line-height:1.6}
+  .tkk6_foot-col h4{font-family:var(--ff-display);font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+  .tkk6_foot-col ul li{margin-bottom:11px}
+  .tkk6_foot-col ul a,.tkk6_foot-col ul span{font-size:.93rem;color:#9AA5BC;transition:color .15s ease}
+  .tkk6_foot-col ul a:hover{color:#fff}
+  .tkk6_foot-legal{display:flex;flex-direction:column;gap:9px}
+  .tkk6_foot-legal .ln{font-size:.9rem;color:#9AA5BC;line-height:1.55}
+  .tkk6_foot-legal .ln b{color:#D8DEEB;font-weight:600}
+  .tkk6_foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:26px;flex-wrap:wrap}
+  .tkk6_foot-bottom p{font-size:.86rem;color:#7E8AA3}
+  .tkk6_foot-bottom .tkk6_links{display:flex;gap:22px}
+  .tkk6_foot-bottom .tkk6_links button{background:none;border:none;color:#9AA5BC;font-family:var(--ff-body);font-size:.86rem;cursor:pointer;transition:color .15s ease}
+  .tkk6_foot-bottom .tkk6_links button:hover{color:#fff;text-decoration:underline}
+
+  /* ---------- Modal ---------- */
+  .tkk6_modal-overlay{position:fixed;inset:0;background:rgba(13,21,38,.6);backdrop-filter:blur(3px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .2s ease}
+  .tkk6_modal-overlay.open{display:flex;opacity:1}
+  .tkk6_modal{background:var(--surface);border-radius:16px;max-width:780px;width:100%;max-height:86vh;display:flex;flex-direction:column;box-shadow:0 30px 80px -20px rgba(13,21,38,.5);transform:translateY(10px);transition:transform .2s ease}
+  .tkk6_modal-overlay.open .tkk6_modal{transform:translateY(0)}
+  .tkk6_modal-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 30px;border-bottom:1px solid var(--line);flex:none}
+  .tkk6_modal-head h3{font-size:1.3rem}
+  .tkk6_modal-head .tkk6_meta{font-size:.8rem;color:var(--slate-2);margin-top:3px}
+  .tkk6_modal-close{background:#F1F4F9;border:none;width:38px;height:38px;border-radius:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;transition:background .15s ease}
+  .tkk6_modal-close:hover{background:#E3E8F0}
+  .tkk6_modal-close svg{width:18px;height:18px;color:var(--ink)}
+  .tkk6_modal-body{padding:26px 30px 32px;overflow-y:auto}
+  .tkk6_modal-body h4{font-family:var(--ff-display);font-weight:700;font-size:1.02rem;color:var(--ink);margin:26px 0 10px}
+  .tkk6_modal-body h4:first-child{margin-top:0}
+  .tkk6_modal-body p{font-size:.95rem;color:var(--slate);margin-bottom:12px;line-height:1.65}
+  .tkk6_modal-body ul{margin:0 0 14px 0;padding-left:2px}
+  .tkk6_modal-body ul li{font-size:.95rem;color:var(--slate);line-height:1.6;padding-left:20px;position:relative;margin-bottom:8px}
+  .tkk6_modal-body ul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);position:absolute;left:2px;top:9px}
+  .tkk6_modal-body .tkk6_ctrl-box{background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:18px 20px;margin-top:8px}
+  .tkk6_modal-body .tkk6_ctrl-box p{margin-bottom:5px;font-size:.92rem}
+  .tkk6_modal-body .tkk6_ctrl-box p:last-child{margin-bottom:0}
+  .tkk6_modal-body .tkk6_ctrl-box strong{color:var(--ink)}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .tkk6_hero-inner,.tkk6_about-grid,.tkk6_contact-grid{grid-template-columns:1fr;gap:40px}
+    .tkk6_hero-card{order:-1}
+    .tkk6_about-visual{min-height:300px;order:-1}
+    .tkk6_cards,.tkk6_quotes{grid-template-columns:1fr 1fr}
+    .tkk6_steps{grid-template-columns:1fr 1fr;gap:30px 22px}
+    .tkk6_foot-top{grid-template-columns:1fr 1fr;gap:36px}
+    .tkk6_foot-brand{grid-column:1/-1}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .tkk6_pad{padding:60px 0}
+    .tkk6_hero{padding:48px 0 50px}
+    .tkk6_nav-links,.tkk6_nav-cta .tkk6_btn{display:none}
+    .tkk6_menu-btn{display:flex}
+    .tkk6_nav-links.mobile-open{
+      display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+      background:var(--surface);border-bottom:1px solid var(--line);padding:8px 24px 18px;box-shadow:var(--shadow);
+    }
+    .tkk6_nav-links.mobile-open a{padding:14px 0;border-bottom:1px solid var(--line-2);font-size:1rem}
+    .tkk6_nav-links.mobile-open .tkk6_btn{display:inline-flex;justify-content:center;margin-top:14px}
+    .tkk6_cards,.tkk6_quotes,.tkk6_steps,.tkk6_about-text .tkk6_pillars{grid-template-columns:1fr}
+    .tkk6_strip .tkk6_wrap{flex-direction:column;align-items:flex-start}
+    .tkk6_foot-top,.tkk6_foot-bottom{grid-template-columns:1fr}
+    .tkk6_foot-bottom{flex-direction:column;align-items:flex-start}
+    .tkk6_modal-head,.tkk6_modal-body{padding-left:22px;padding-right:22px}
+    .tkk6_hero-meta{gap:22px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1!important;transform:none!important}
+  }
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+
+<link rel="canonical" href="https://smartchoicetoday.online/">
+<meta name="description" content="Descubra informações exclusivas e conteúdo verificado em smartchoicetoday.online. Acesse agora e confira os detalhes completos.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smartchoicetoday.online/">
+<meta property="og:site_name" content="smartchoicetoday.online">
+<meta property="og:description" content="Descubra informações exclusivas e conteúdo verificado em smartchoicetoday.online. Acesse agora e confira os detalhes completos.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="smartchoicetoday.online">
+<meta name="generator" content="cms-7ae0041e6a19">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Smartchoicetoday","url":"https://smartchoicetoday.online/","datePublished":"2024-09-26","dateModified":"2026-03-10","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Smartchoicetoday","url":"https://smartchoicetoday.online/"},"publisher":{"@type":"Organization","name":"Smartchoicetoday","url":"https://smartchoicetoday.online/"}}</script>
+
+<style>:root{--mcyl-p:rgb(1,95,47);--mcyl-s:rgb(151,254,120);--mcyl-id:'765ab815e6ca'}@keyframes rrvvkkaq{from{opacity:1}to{opacity:1}}.rfbjag{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:ocfh2wuakl v4.43.249 -->
+</head>
+<body data-s="c46ce9b7" data-p="krmxbo">
+<noscript><div style="padding:15px;text-align:center;font-size:14px;"><p>JavaScript é necessário para visualizar o conteúdo completo de smartchoicetoday.</p></div></noscript>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="tkk6_wrap">
+    <nav class="tkk6_nav">
+      <a class="tkk6_brand" href="#top" aria-label="LEO S.A. — página inicial">
+        <svg class="tkk6_logomark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14233F"/>
+          <rect x="9" y="9" width="9" height="9" rx="2.2" fill="#fff" opacity=".9"/>
+          <rect x="22" y="9" width="9" height="9" rx="2.2" fill="#fff" opacity=".5"/>
+          <rect x="9" y="22" width="9" height="9" rx="2.2" fill="#fff" opacity=".5"/>
+          <rect x="22" y="22" width="9" height="9" rx="2.2" fill="#C2974A"/>
+        </svg>
+        <span>LEO S.A.<span class="tkk6_sub">APOIO ADMINISTRATIVO</span></span>
+      </a>
+      <ul class="tkk6_nav-links" id="navLinks">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Como funciona</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a class="tkk6_btn tkk6_btn-primary" href="#contato">Falar com a equipe</a></li>
+      </ul>
+      <div class="tkk6_nav-cta">
+        <a class="tkk6_btn tkk6_btn-primary" href="#contato">Falar com a equipe</a>
+        <button class="tkk6_menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="tkk6_hero">
+  <div class="tkk6_hero-grid-bg" aria-hidden="true"></div>
+  <div class="tkk6_wrap">
+    <div class="tkk6_hero-inner">
+      <div class="hero-copy reveal">
+        <span class="tkk6_eyebrow">Serviços combinados de escritório &amp; apoio administrativo</span>
+        <h1>A rotina administrativa do seu negócio, <span class="tkk6_accent">organizada e em boas mãos.</span></h1>
+        <p class="tkk6_lead">A LEO S.A. atua como uma extensão da estrutura administrativa da sua empresa, cuidando de tarefas de escritório, documentos e processos operacionais para que sua equipe foque no que é central para o negócio.</p>
+        <div class="tkk6_hero-actions">
+          <a class="tkk6_btn tkk6_btn-primary" href="#servicos">Conhecer os serviços
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a class="tkk6_btn tkk6_btn-ghost" href="#contato">Falar com a equipe</a>
+        </div>
+        <div class="tkk6_hero-meta">
+          <div class="tkk6_item"><span class="k">Barueri · SP</span><span class="l">Sede administrativa</span></div>
+          <div class="tkk6_item"><span class="k">Equipe dedicada</span><span class="l">Atendimento direto</span></div>
+          <div class="tkk6_item"><span class="k">Processos claros</span><span class="l">Organização e sigilo</span></div>
+        </div>
+      </div>
+      <aside class="tkk6_hero-card reveal" aria-label="Resumo de atuação">
+        <span class="tkk6_tag">Como ajudamos</span>
+        <h3>Apoio sob medida para a sua operação</h3>
+        <div class="tkk6_row">
+          <span class="tkk6_ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></span>
+          <p><strong>Rotinas administrativas</strong>Organização de agendas, registros e tarefas do dia a dia.</p>
+        </div>
+        <div class="tkk6_row">
+          <span class="tkk6_ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+          <p><strong>Gestão documental</strong>Controle, organização e arquivo de documentos com confidencialidade.</p>
+        </div>
+        <div class="tkk6_row">
+          <span class="tkk6_ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <p><strong>Suporte a atendimento</strong>Apoio às operações de relacionamento por e-mail, telefone e canais digitais.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="tkk6_strip">
+  <div class="tkk6_wrap">
+    <p>Trabalhamos lado a lado com cada cliente, com comunicação direta e responsabilidade sobre cada etapa do que entregamos.</p>
+    <div class="tkk6_vals">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Confidencialidade</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Processos organizados</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Comunicação contínua</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="sobre" class="tkk6_pad">
+  <div class="tkk6_wrap">
+    <div class="tkk6_about-grid">
+      <div class="tkk6_about-visual reveal" aria-hidden="true">
+        <div class="tkk6_pattern"></div>
+        <div class="tkk6_modules">
+          <div class="tkk6_mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div>
+          <div class="tkk6_mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="tkk6_mod tkk6_fill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="tkk6_mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+          <div class="tkk6_mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+          <div class="tkk6_mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        </div>
+      </div>
+      <div class="tkk6_about-text reveal">
+        <span class="tkk6_eyebrow">Quem somos</span>
+        <h2>Uma estrutura administrativa que trabalha junto com a sua</h2>
+        <p>A LEO S.A. é uma empresa de serviços combinados de escritório e apoio administrativo, sediada em Barueri, São Paulo. Ajudamos empresas a manter suas rotinas operacionais em ordem — da organização de documentos ao acompanhamento de processos internos.</p>
+        <p>Atuamos como uma extensão da equipe administrativa dos nossos clientes. Assumimos tarefas combinadas com organização, atenção aos detalhes e total confidencialidade, para que as equipes internas tenham mais tempo para as atividades centrais do negócio.</p>
+        <div class="tkk6_pillars">
+          <div class="tkk6_pillar">
+            <span class="tkk6_dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+            <div><b>Organização</b><span>Processos claros e documentados em cada etapa.</span></div>
+          </div>
+          <div class="tkk6_pillar">
+            <span class="tkk6_dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+            <div><b>Sigilo</b><span>Tratamento responsável das informações dos clientes.</span></div>
+          </div>
+          <div class="tkk6_pillar">
+            <span class="tkk6_dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <div><b>Proximidade</b><span>Comunicação direta e acompanhamento constante.</span></div>
+          </div>
+          <div class="tkk6_pillar">
+            <span class="tkk6_dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/></svg></span>
+            <div><b>Adaptação</b><span>Escopo ajustado à realidade de cada operação.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="servicos" class="tkk6_pad">
+  <div class="tkk6_wrap">
+    <div class="tkk6_section-head reveal">
+      <span class="tkk6_eyebrow">O que fazemos</span>
+      <h2>Serviços de apoio administrativo e operacional</h2>
+      <p class="tkk6_lead">Um conjunto de serviços de escritório e back-office para empresas que precisam de apoio confiável na rotina administrativa.</p>
+    </div>
+    <div class="tkk6_cards">
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="14" x2="16" y2="14"/></svg></div>
+        <h3>Apoio administrativo</h3>
+        <p>Organização de agendas, registros, controles internos e suporte às tarefas administrativas do dia a dia da sua empresa.</p>
+      </article>
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
+        <h3>Gestão documental</h3>
+        <p>Organização, digitalização e controle de documentos, com critérios de segurança e confidencialidade no manuseio das informações.</p>
+      </article>
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Suporte a atendimento</h3>
+        <p>Apoio às operações de relacionamento com o público, organizando contatos recebidos por e-mail, telefone e canais digitais.</p>
+      </article>
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <h3>Processamento de dados e pedidos</h3>
+        <p>Registro, conferência e organização de informações e solicitações, mantendo as bases atualizadas e consistentes.</p>
+      </article>
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>Serviços de escritório</h3>
+        <p>Recepção e triagem de demandas, controle de agendas e apoio às tarefas operacionais que mantêm o escritório funcionando.</p>
+      </article>
+      <article class="tkk6_card reveal">
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Suporte operacional</h3>
+        <p>Acompanhamento de processos internos e apoio à continuidade das operações, com rotinas organizadas e previsíveis.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="processo" class="tkk6_pad">
+  <div class="tkk6_wrap">
+    <div class="tkk6_section-head reveal">
+      <span class="tkk6_eyebrow">Como funciona</span>
+      <h2>Um caminho simples para começar</h2>
+      <p class="tkk6_lead">Do primeiro contato à rotina já em andamento, cada etapa é clara e acompanhada de perto.</p>
+    </div>
+    <div class="tkk6_steps">
+      <div class="tkk6_step tkk6_active reveal">
+        <h3>Contato</h3>
+        <p>Você nos apresenta a rotina e as demandas administrativas do seu negócio.</p>
+      </div>
+      <div class="tkk6_step reveal">
+        <h3>Diagnóstico</h3>
+        <p>Mapeamos os processos juntos e definimos o escopo de apoio mais adequado.</p>
+      </div>
+      <div class="tkk6_step reveal">
+        <h3>Execução</h3>
+        <p>Nossa equipe assume as tarefas combinadas, com organização e padrão definido.</p>
+      </div>
+      <div class="tkk6_step reveal">
+        <h3>Acompanhamento</h3>
+        <p>Mantemos comunicação contínua e ajustamos o que for necessário ao longo do tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="depoimentos" class="tkk6_pad">
+  <div class="tkk6_wrap">
+    <div class="tkk6_section-head reveal">
+      <span class="tkk6_eyebrow">Quem trabalha com a gente</span>
+      <h2>O que dizem sobre o nosso apoio</h2>
+    </div>
+    <div class="tkk6_quotes">
+      <figure class="tkk6_quote reveal">
+        <div class="tkk6_mark" aria-hidden="true">&ldquo;</div>
+        <p>O apoio administrativo ajudou a organizar nossa rotina interna e deixou os processos do dia a dia bem mais claros.</p>
+        <figcaption class="tkk6_who"><span class="av">AP</span><div><b>Ana P.</b><span>Gestora administrativa</span></div></figcaption>
+      </figure>
+      <figure class="tkk6_quote reveal">
+        <div class="tkk6_mark" aria-hidden="true">&ldquo;</div>
+        <p>Equipe atenciosa e organizada. A comunicação é direta e o acompanhamento das tarefas é constante.</p>
+        <figcaption class="tkk6_who"><span class="av">RM</span><div><b>Ricardo M.</b><span>Empresário</span></div></figcaption>
+      </figure>
+      <figure class="tkk6_quote reveal">
+        <div class="tkk6_mark" aria-hidden="true">&ldquo;</div>
+        <p>Conseguimos delegar tarefas operacionais com tranquilidade e manter o foco no que é central para a empresa.</p>
+        <figcaption class="tkk6_who"><span class="av">CS</span><div><b>Camila S.</b><span>Coordenadora de operações</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contato" class="tkk6_pad">
+  <div class="tkk6_wrap">
+    <div class="tkk6_contact-grid">
+      <div class="tkk6_contact-info reveal">
+        <span class="tkk6_eyebrow">Fale com a gente</span>
+        <h2>Vamos conversar sobre a sua operação</h2>
+        <p>Conte para a nossa equipe quais rotinas administrativas você gostaria de organizar. Respondemos a cada contato de forma direta.</p>
+        <div class="tkk6_channel">
+          <span class="tkk6_ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <div><div class="l">E-mail</div><a class="v" href="mailto:femmybreanne943@gmail.com">femmybreanne943@gmail.com</a></div>
+        </div>
+        <div class="tkk6_channel">
+          <span class="tkk6_ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><div class="l">Telefone</div><a class="v" href="tel:+551138282211">(11) 3828-2211</a></div>
+        </div>
+        <div class="tkk6_channel">
+          <span class="tkk6_ch-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><div class="l">Endereço</div><span class="v">R. Dr. Carlos Roberto Presgrave de Melo, 21 — Anexo 7<br>Vila Iracema-Belval, Barueri/SP · CEP 06.422-110</span></div>
+        </div>
+      </div>
+
+      <div class="tkk6_form-card reveal">
+        <h3>Envie uma mensagem</h3>
+        <p class="tkk6_fc-sub">Preencha os campos abaixo e retornaremos pelo canal informado.</p>
+        <form id="contactForm" novalidate>
+          <div class="tkk6_field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" required>
+          </div>
+          <div class="tkk6_field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required>
+          </div>
+          <div class="tkk6_field">
+            <label for="empresa">Empresa <span style="font-weight:400;color:var(--slate-2)">(opcional)</span></label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" autocomplete="organization">
+          </div>
+          <div class="tkk6_field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre as rotinas que gostaria de organizar." required></textarea>
+          </div>
+          <button type="submit" class="tkk6_btn tkk6_btn-gold" style="width:100%;justify-content:center">Enviar mensagem</button>
+          <p class="tkk6_form-note">Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa Política de Privacidade.</p>
+        </form>
+        <div class="tkk6_form-success" id="formSuccess" role="status">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div><b>Mensagem registrada</b><span>Obrigado pelo contato. Nossa equipe retornará pelo canal informado.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="tkk6_wrap">
+    <div class="tkk6_foot-top">
+      <div class="tkk6_foot-brand">
+        <span class="tkk6_brand">
+          <svg class="tkk6_logomark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#1E2E4D"/>
+            <rect x="9" y="9" width="9" height="9" rx="2.2" fill="#fff" opacity=".9"/>
+            <rect x="22" y="9" width="9" height="9" rx="2.2" fill="#fff" opacity=".5"/>
+            <rect x="9" y="22" width="9" height="9" rx="2.2" fill="#fff" opacity=".5"/>
+            <rect x="22" y="22" width="9" height="9" rx="2.2" fill="#C2974A"/>
+          </svg>
+          <span>LEO S.A.<span class="tkk6_sub">APOIO ADMINISTRATIVO</span></span>
+        </span>
+        <p>Serviços combinados de escritório e apoio administrativo para empresas que querem manter a rotina operacional em ordem.</p>
+      </div>
+      <div class="tkk6_foot-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="tkk6_foot-col">
+        <h4>Dados da empresa</h4>
+        <div class="tkk6_foot-legal">
+          <span class="ln"><b>LEO S.A.</b></span>
+          <span class="ln">CNPJ: 61.069.373/0105-08</span>
+          <span class="ln">R. Dr. Carlos Roberto Presgrave de Melo, 21 — Anexo 7, Vila Iracema-Belval, Barueri/SP, CEP 06.422-110</span>
+          <span class="ln">Telefone: (11) 3828-2211</span>
+          <span class="ln">E-mail: femmybreanne943@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="tkk6_foot-bottom">
+      <p>© 2026 LEO S.A. — Todos os direitos reservados.</p>
+      <div class="tkk6_links">
+        <button type="button" data-modal="privacy">Política de Privacidade</button>
+        <button type="button" data-modal="terms">Termos de Uso</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL: PRIVACY ============ -->
+<div class="tkk6_modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <div class="tkk6_modal">
+    <div class="tkk6_modal-head">
+      <div>
+        <h3 id="privacy-title">Política de Privacidade</h3>
+        <div class="tkk6_meta">Última atualização: junho de 2026</div>
+      </div>
+      <button class="tkk6_modal-close" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    </div>
+    <div class="tkk6_modal-body">
+      <p>A LEO S.A. (“nós”) valoriza a privacidade e a segurança dos dados das pessoas que entram em contato conosco. Esta Política descreve como tratamos informações pessoais, em conformidade com a Lei nº 13.709/2018 — Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+
+      <h4>1. Dados que coletamos</h4>
+      <p>Coletamos apenas os dados necessários para responder solicitações e prestar nossos serviços:</p>
+      <ul>
+        <li>Dados de contato que você nos fornece voluntariamente pelo formulário do site, como nome, e-mail, empresa e o conteúdo da mensagem.</li>
+        <li>Dados de navegação de caráter técnico, como informações de acesso e cookies essenciais ao funcionamento do site.</li>
+      </ul>
+
+      <h4>2. Finalidade do uso</h4>
+      <p>Utilizamos os dados coletados para:</p>
+      <ul>
+        <li>Responder aos contatos e solicitações recebidas;</li>
+        <li>Prestar e aprimorar os serviços de apoio administrativo;</li>
+        <li>Cumprir obrigações legais e regulatórias aplicáveis.</li>
+      </ul>
+
+      <h4>3. Base legal</h4>
+      <p>O tratamento dos dados ocorre com fundamento nas hipóteses legais previstas na LGPD, em especial o consentimento do titular, a execução de contrato, o cumprimento de obrigação legal e o legítimo interesse, sempre respeitados os direitos e liberdades do titular.</p>
+
+      <h4>4. Compartilhamento de dados</h4>
+      <p>A LEO S.A. não comercializa dados pessoais. O compartilhamento ocorre apenas quando necessário à prestação do serviço contratado ou quando exigido por obrigação legal ou determinação de autoridade competente.</p>
+
+      <h4>5. Armazenamento e segurança</h4>
+      <p>Adotamos medidas técnicas e administrativas adequadas para proteger os dados contra acessos não autorizados, perda ou alteração. O acesso às informações é restrito a colaboradores que delas necessitam para o desempenho de suas funções.</p>
+
+      <h4>6. Direitos do titular</h4>
+      <p>Nos termos da LGPD, você pode, a qualquer momento, solicitar:</p>
+      <ul>
+        <li>Confirmação da existência de tratamento e acesso aos seus dados;</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+        <li>Portabilidade e informação sobre compartilhamento;</li>
+        <li>Revogação do consentimento e eliminação dos dados tratados com base nele.</li>
+      </ul>
+
+      <h4>7. Cookies</h4>
+      <p>Utilizamos cookies essenciais para o funcionamento do site. Você pode gerenciar ou desativar cookies nas configurações do seu navegador, ciente de que isso pode afetar a experiência de navegação.</p>
+
+      <h4>8. Retenção dos dados</h4>
+      <p>Os dados são mantidos apenas pelo período necessário ao cumprimento das finalidades descritas ou de obrigações legais, sendo posteriormente eliminados de forma segura.</p>
+
+      <h4>9. Alterações desta Política</h4>
+      <p>Esta Política poderá ser atualizada a qualquer momento. A versão vigente estará sempre disponível nesta página, com a respectiva data de atualização.</p>
+
+      <h4>10. Encarregado e contato</h4>
+      <p>Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento de dados pessoais, entre em contato com o controlador:</p>
+      <div class="tkk6_ctrl-box">
+        <p><strong>LEO S.A.</strong></p>
+        <p>CNPJ: 61.069.373/0105-08</p>
+        <p>R. Dr. Carlos Roberto Presgrave de Melo, 21 — Anexo 7, Vila Iracema-Belval, Barueri/SP, CEP 06.422-110</p>
+        <p>E-mail: femmybreanne943@gmail.com · Telefone: (11) 3828-2211</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: TERMS ============ -->
+<div class="tkk6_modal-overlay" id="modal-terms" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+  <div class="tkk6_modal">
+    <div class="tkk6_modal-head">
+      <div>
+        <h3 id="terms-title">Termos de Uso</h3>
+        <div class="tkk6_meta">Última atualização: junho de 2026</div>
+      </div>
+      <button class="tkk6_modal-close" data-close aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    </div>
+    <div class="tkk6_modal-body">
+      <p>Estes Termos de Uso regem o acesso e a utilização do site institucional da LEO S.A. Ao navegar por este site, você declara estar ciente e de acordo com as condições abaixo.</p>
+
+      <h4>1. Aceitação dos termos</h4>
+      <p>O uso deste site implica a aceitação integral destes Termos. Caso não concorde com qualquer disposição, recomendamos a interrupção da navegação.</p>
+
+      <h4>2. Sobre a LEO S.A.</h4>
+      <p>A LEO S.A., inscrita no CNPJ sob o nº 61.069.373/0105-08, é uma empresa de serviços combinados de escritório e apoio administrativo, com sede em Barueri, São Paulo.</p>
+
+      <h4>3. Finalidade do site</h4>
+      <p>Este site tem caráter institucional e informativo, destinado a apresentar a empresa e seus serviços. A efetiva prestação dos serviços ocorre mediante contato e contratação direta com a LEO S.A.</p>
+
+      <h4>4. Uso adequado</h4>
+      <p>Você se compromete a utilizar o site de forma lícita, abstendo-se de praticar atos que possam comprometer seu funcionamento, sua segurança ou os direitos de terceiros.</p>
+
+      <h4>5. Propriedade intelectual</h4>
+      <p>Os conteúdos, marcas, textos e elementos visuais deste site pertencem à LEO S.A. ou a ela foram licenciados, sendo vedada a reprodução sem autorização prévia.</p>
+
+      <h4>6. Responsabilidades e limitações</h4>
+      <p>As informações são disponibilizadas de boa-fé e com finalidade informativa. A LEO S.A. empenha-se em manter o conteúdo atualizado, mas não garante a disponibilidade ininterrupta do site nem se responsabiliza por eventuais indisponibilidades de ordem técnica.</p>
+
+      <h4>7. Privacidade</h4>
+      <p>O tratamento de dados pessoais coletados por meio deste site observa a nossa Política de Privacidade, elaborada em conformidade com a LGPD.</p>
+
+      <h4>8. Alterações dos termos</h4>
+      <p>Estes Termos podem ser atualizados a qualquer momento, passando a versão revisada a vigorar a partir de sua publicação nesta página.</p>
+
+      <h4>9. Legislação e foro</h4>
+      <p>Estes Termos são regidos pela legislação brasileira. Fica eleito o foro da Comarca de Barueri/SP para dirimir eventuais controvérsias, com renúncia a qualquer outro, por mais privilegiado que seja.</p>
+
+      <h4>10. Contato</h4>
+      <div class="tkk6_ctrl-box">
+        <p><strong>LEO S.A.</strong></p>
+        <p>E-mail: femmybreanne943@gmail.com · Telefone: (11) 3828-2211</p>
+        <p>R. Dr. Carlos Roberto Presgrave de Melo, 21 — Anexo 7, Vila Iracema-Belval, Barueri/SP, CEP 06.422-110</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- Header scroll shadow ----
+  var header = document.getElementById('top');
+  function onScroll(){
+    if(window.scrollY > 12){ header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---- Mobile menu ----
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('mobile-open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      navLinks.classList.remove('mobile-open');
+      menuBtn.setAttribute('aria-expanded','false');
+    });
+  });
+
+  // ---- Scroll reveal ----
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  // ---- Contact form (client-side) ----
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var nome = form.nome.value.trim();
+    var email = form.email.value.trim();
+    var msg = form.mensagem.value.trim();
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!nome || !emailOk || !msg){
+      if(!nome) form.nome.focus();
+      else if(!emailOk) form.email.focus();
+      else form.mensagem.focus();
+      return;
+    }
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+  });
+
+  // ---- Modals ----
+  var overlays = {
+    privacy: document.getElementById('modal-privacy'),
+    terms: document.getElementById('modal-terms')
+  };
+  var lastFocused = null;
+  function openModal(key){
+    var ov = overlays[key];
+    if(!ov) return;
+    lastFocused = document.activeElement;
+    ov.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    var closeBtn = ov.querySelector('[data-close]');
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(ov){
+    ov.classList.remove('open');
+    document.body.style.overflow = '';
+    if(lastFocused) lastFocused.focus();
+  }
+  document.querySelectorAll('[data-modal]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal(btn.getAttribute('data-modal')); });
+  });
+  Object.keys(overlays).forEach(function(k){
+    var ov = overlays[k];
+    if(!ov) return;
+    ov.addEventListener('click', function(e){ if(e.target === ov) closeModal(ov); });
+    ov.querySelectorAll('[data-close]').forEach(function(b){
+      b.addEventListener('click', function(){ closeModal(ov); });
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      Object.keys(overlays).forEach(function(k){
+        if(overlays[k] && overlays[k].classList.contains('open')) closeModal(overlays[k]);
+      });
+    }
+  });
+})();
+</script>
+<footer style="text-align:center;padding:16px 10px;font-size:11px;color:#888;margin-top:30px;border-top:1px solid #eaeaea"><p>© 2024 Smartchoicetoday. Este site não é afiliado a nenhuma entidade governamental. Conteúdo informativo. <a href="https://smartchoicetoday.online/" style="color:#888;text-decoration:none">smartchoicetoday.online</a></p></footer>
+</body>
+</html>
+
+<!-- 6d4fff260835ac16fe985ff7 -->
